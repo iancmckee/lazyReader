@@ -4,19 +4,7 @@ import numpy as np
 from pynput.keyboard import Key, Controller
 from pynput import keyboard
 
-# import time
-#
-# frameWidth = 1280
-# frameHeight = 960
-# cap = cv2.VideoCapture(0)
-# # cap = cv2.VideoCapture(1)
-# cap.set(3,frameWidth)
-# cap.set(4,frameHeight)
-#
 keyboardController = Controller()
-
-# fourcc = cv2.VideoWriter_fourcc(*'XVID')
-# out = cv2.VideoWriter('./nodcontrol.mp4', fourcc, 20.0, (640, 480))
 
 
 # dinstance function
