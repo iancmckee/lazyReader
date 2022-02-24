@@ -1,8 +1,7 @@
 import cv2
 import numpy as np
 
-from pynput.keyboard import Key, Controller
-from pynput import keyboard
+from pynput.keyboard import Key, Controller, Listener
 
 keyboardController = Controller()
 
@@ -84,10 +83,10 @@ def findFace():
 
 
 # The key combination to check
-ctrl_f1 = {keyboard.Key.ctrl_l, keyboard.Key.f1}
-ctrl_f2 = {keyboard.Key.ctrl_l, keyboard.Key.f2}
-ctrl_alt = {keyboard.Key.ctrl_l, keyboard.Key.alt_l}
-ctrl_shft = {keyboard.Key.ctrl_l, keyboard.Key.shift_l}
+ctrl_f1 = {Key.ctrl_l, Key.f1}
+ctrl_f2 = {Key.ctrl_l, Key.f2}
+ctrl_alt = {Key.ctrl_l, Key.alt_l}
+ctrl_shft = {Key.ctrl_l, Key.shift_l}
 
 # The currently active modifiers
 current = set()
@@ -97,7 +96,7 @@ scrollingEnabled = True
 def on_press(key):
     global y_movement, scrollup_gesture_threshold, scrolldown_gesture_threshold, scrollingEnabled
     #recalibrate center of face
-    if key == keyboard.Key.esc:
+    if key == Key.esc:
         findFace()
         y_movement = 0
     #set limit for scrolling down
@@ -133,7 +132,7 @@ def on_release(key):
         pass
 
 
-listener = keyboard.Listener(on_press=on_press, on_release=on_release)
+listener = Listener(on_press=on_press, on_release=on_release)
 listener.start()  # start to listen on a separate thread
 
 gesture = False
