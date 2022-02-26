@@ -1,7 +1,8 @@
-#Thanks for checking out the Repo!
-## A lot of inspiration came from the following repo detecting head nodding/shaking https://gist.github.com/smeschke/e59a9f5a40f0b0ed73305d34695d916b
+# Thanks for checking out the Repo!
+## A lot of inspiration came from the following repo detecting head nodding/shaking 
+  - https://gist.github.com/smeschke/e59a9f5a40f0b0ed73305d34695d916b
 
-### There are some built in commands that can customize how much you have to look up/ look down
+## There are some built in commands that can customize how much you have to look up/ look down to trigger scroll
   - CTRL+ALT removes existing trigger limites (defaults to 35)
   - CTRL+F1 this sets the lookup/ scroll down limit to the y-movement you're currently at
   - CTRL+F2 this sets the look down/ scroll up limit to the y-movement you're currently at
